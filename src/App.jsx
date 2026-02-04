@@ -60,6 +60,9 @@ import ErrorBoundary from './components/ErrorBoundary';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { BusProvider } from './contexts/BusContext';
 
+import PrivacyPolicy from "./components/Privacy";
+import TermsAndConditions from "./components/Terms";
+
 // Error Boundary for debugging
 class AppErrorBoundary extends React.Component {
   constructor(props) {
@@ -112,7 +115,8 @@ function App() {
               <Route path='/trip' element={<Trip />} />
               <Route path='/faq' element={<FaqPage />} />
               <Route path='/bestrides' element={<BestRides />} />
-              <Route path='/policy' element={<InfoPage />} />
+              <Route path='/policy' element={<PrivacyPolicy />} />
+              <Route path='/terms' element={<TermsAndConditions />} />
               <Route path='/rules' element={<Rules />} />
               <Route path='/under-construction' element={<UnderConstruction />} />
               <Route path='/contactUs' element={<Navigate to='/contact' replace />} />
